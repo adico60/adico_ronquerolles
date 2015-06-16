@@ -1,0 +1,30 @@
+//
+// Meta Section
+// --------------------------------------------------
+.meta-section {
+	background-color: mix(@body-bg, white, 77%);
+	padding: @line-height-computed/2 0;
+	a {
+		font-weight: bold;
+		&:hover,
+		&:focus {
+		  color: @link-color;
+		}
+	}
+	.active a {
+		color: @link-color;
+	}
+	ul,
+	p {
+		margin: 10px 0;
+	}
+	@media (min-width: @screen-md) {
+		ul,
+		p {
+			margin: 0;
+		}
+		.copyright {
+			text-align: center;
+		}
+	}
+}

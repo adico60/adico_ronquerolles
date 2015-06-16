@@ -1,0 +1,36 @@
+################################
+###  BELAYOUT: RONQUEROLLES  ###
+################################
+mod {
+    web_layout {
+        BackendLayouts {
+            clean {
+                title = LLL:EXT:adico_ronquerolles/Resources/Private/Language/Backend.xlf:backend_layout.clean
+                config {
+                    backend_layout {
+                        colCount = 10
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    
+                                    1 {
+                                        name = LLL:EXT:cms/locallang_ttc.xlf:colPos.I.1
+                                        colPos = 0
+                                        colspan = 8
+                                    }
+                                    2 {
+                                        name = LLL:EXT:cms/locallang_ttc.xlf:colPos.I.2
+                                        colPos = 2
+                                        colspan = 2
+					                  }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:adico_ronquerolles/Resources/Public/Images/BackendLayouts/ronquerolles_clean.gif
+            }
+        }
+    }
+}

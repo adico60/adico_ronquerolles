@@ -1,0 +1,30 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:adico_ronquerolles/Configuration/TypoScript/Bootstrap/constants.txt">
+
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/formhandler/contact-form/ts/ts_constants.txt">
+############
+### PAGE ###
+############
+page {
+
+    tracking {
+        piwik {
+            # cat=bootstrap package: basic/180/130; type=int+; label=Piwik:      Tracking-ID
+            trackingID =
+            # cat=bootstrap package: basic/180/140; type=string; label=Piwik:    Piwik URL (no http[s]:// nor trailing slash -/-)
+            url =
+        }
+    }
+    fluidtemplate{
+        templateRootPath = EXT:adico_ronquerolles/Resources/Private/Templates/Page/
+        layoutRootPath = EXT:adico_ronquerolles/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:adico_ronquerolles/Resources/Private/Partials/Page/
+    }
+}
+
+##############
+### CONFIG ###
+##############
+config {
+    # cat=bootstrap package: advanced/150/180; type=string; label=Header Comment
+    headerComment =
+}

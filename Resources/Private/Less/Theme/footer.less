@@ -1,0 +1,18 @@
+//
+// Footer Section
+// --------------------------------------------------
+.footer-section {
+	border-top: 1px solid lightn(@text-color,10%);
+	color: contrast(@gray-dark, black, white, 43%);
+	margin-top: @line-height-computed*2;
+	padding: @line-height-computed 0 @line-height-computed*1.5;
+	background-color: mix(@body-bg, white, 77%);
+
+	a {
+		color: contrast(@gray-dark, black, white, 43%);
+		&:hover,
+		&:focus {
+		  color: @link-color;
+		}
+	}
+}

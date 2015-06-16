@@ -1,0 +1,16 @@
+<div class="body-bg">
+	<div class="header-wrap">
+		<div class="container" id="bgImg" style="background-image: url(<f:cObject typoscriptObjectPath="lib.pageBgImg" />);">
+			<div id="logo">
+			<f:if condition="{logoFile}">
+				<f:then>
+					<f:cObject typoscriptObjectPath="lib.logo" />
+				</f:then>
+				<f:else>
+					<h1>{siteTile}</h1>
+				</f:else>
+			</f:if>
+			</div>
+		</div>
+	</div>
+</div>

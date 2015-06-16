@@ -1,0 +1,55 @@
+################################
+###  BELAYOUT: RONQUEROLLES  ###
+################################
+mod {
+    web_layout {
+        BackendLayouts {
+            accueil {
+                title = LLL:EXT:adico_ronquerolles/Resources/Private/Language/Backend.xlf:backend_layout.accueil
+                config {
+                    backend_layout {
+                        colCount = 8
+                        rowCount = 2
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:cms/locallang_ttc.xlf:colPos.I.1
+                                        colPos = 0
+                                        colspan = 6
+                                    }
+                                    2 {
+                                        name = LLL:EXT:cms/locallang_ttc.xlf:colPos.I.2
+                                        colPos = 2
+                                        colspan = 2
+					rowspan = 2
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:adico_ronquerolles/Resources/Private/Language/Backend.xlf:backend_layout.column.gauche
+                                        colPos = 40
+                                        colspan = 2
+                                    }
+                                    2 {
+                                        name = LLL:EXT:adico_ronquerolles/Resources/Private/Language/Backend.xlf:backend_layout.column.milieu
+                                        colPos = 41
+                                        colspan = 2
+                                    }
+                                    3 {
+                                        name = LLL:EXT:adico_ronquerolles/Resources/Private/Language/Backend.xlf:backend_layout.column.droite
+                                        colPos = 42
+                                        colspan = 2
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:adico_ronquerolles/Resources/Public/Images/BackendLayouts/ronquerolles_accueil.gif
+            }
+        }
+    }
+}
