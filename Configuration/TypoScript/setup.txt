@@ -106,33 +106,54 @@ config {
     concatenateCss = {$config.concatenateCss}
 }
 
-
-page.10.file.stdWrap.cObject >
-page.10.file.stdWrap.cObject = CASE
-page.10.file.stdWrap.cObject {
-  key.data = levelfield:-1, backend_layout_next_level, slide
-  key.override.field = backend_layout
-
-  bootstrap_package__accueil = TEXT
-  bootstrap_package__accueil.value = {$page.fluidtemplate.templateRootPath}Accueil.html
-  bootstrap_package__accueil.insertData = 1
-
-  bootstrap_package__interieur = TEXT
-  bootstrap_package__interieur.value = {$page.fluidtemplate.templateRootPath}Interieur.html
-  bootstrap_package__interieur.insertData = 1
-
-  bootstrap_package__clean = TEXT
-  bootstrap_package__clean.value = {$page.fluidtemplate.templateRootPath}Clean.html
-  bootstrap_package__clean.insertData = 1
-
-  default = TEXT
-  default.value = {$page.fluidtemplate.templateRootPath}Interieur.html
-  default.insertData = 1
-}
-
-page.includeCSS.theme = EXT:adico_ronquerolles/Resources/Private/Less/Theme/theme.less
-
 page {
+    10 {
+        file {
+            stdWrap {
+                cObject = CASE
+                cObject {
+                    key.data = levelfield:-1, backend_layout_next_level, slide
+                    key.override.field = backend_layout
+
+                    pagets__accueil = TEXT
+                    pagets__accueil.value = Accueil
+                    pagets__accueil.insertData = 1
+
+                    pagets__interieur = TEXT
+                    pagets__interieur.value = Interieur
+                    pagets__interieur.insertData = 1
+
+                    pagets__clean = TEXT
+                    pagets__clean.value = Clean
+                    pagets__clean.insertData = 1
+					
+                    default = TEXT
+                    default.value = Interieur
+                    default.insertData = 1
+                 }
+            }
+        }
+         templateRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
+            1 = EXT:adico_ronquerolles/Resources/Private/Templates/Page/
+            2 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
+            1 = EXT:adico_ronquerolles/Resources/Private/Partials/Page/
+            2 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
+            1 = EXT:adico_ronquerolles/Resources/Private/Layouts/Page/
+            2 = {$page.fluidtemplate.layoutRootPath}
+        }
+    }
+
+    includeCSS {
+        theme = EXT:adico_ronquerolles/Resources/Private/Less/Theme/theme.less
+    }
+	
     jsFooterInline {
         # Piwik Analytics
         10 = COA
