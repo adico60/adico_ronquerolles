@@ -176,4 +176,62 @@ page {
     }
 }
 
+#Accordion
+tt_content.bootstrap_package_accordion = COA
+tt_content.bootstrap_package_accordion {
+  10 =< lib.stdheader
+  20 = FLUIDTEMPLATE
+  20 {
+    file = {$plugin.bootstrap_package_contentelements.view.templateRootPath}Bootstrap/Accordion.html
+    partialRootPath = {$plugin.bootstrap_package_contentelements.view.partialRootPath}
+    layoutRootPath = {$plugin.bootstrap_package_contentelements.view.layoutRootPath}
+  }
+}
 
+#Bandeau Défilant
+temp.carousel = COA
+temp.carousel {
+  10 = CONTENT
+  10 {
+    table = tt_content
+    select.where = colPos = 0
+    select.orderBy = sorting
+    select.pidInList = {$page.bandeau}
+    layoutKey = default
+  layout {
+
+    default {
+     element = <img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
+     source =
+    }
+    }    
+  }
+}
+
+lib.bandeau = COA
+lib.bandeau {
+  10 < temp.carousel
+
+    # Here comes the typolink function.
+    stdWrap.typolink {
+
+        # This is the destination of the link...
+        parameter = {$page.home}
+
+        # with a target ("_blank" opens a new window)...
+        extTarget = _self
+
+        # and add a class to the link so we can style it.
+        ATagParams = class="linkclass"
+
+        # and add a title to the link.
+        title = Accueil
+    }
+}
+
+#Actualités
+plugin.tx_newsslider {
+_LOCAL_LANG.fr {
+      readmore = Lire la suite >>
+  }
+}
